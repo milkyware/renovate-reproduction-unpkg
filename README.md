@@ -4,11 +4,39 @@ Reproduction for **[Renovate discussion 36653](https://github.com/renovatebot/re
 
 ## Current behavior
 
-Explain the current behavior here.
+Renovate currently only supports the **[cdnjs](https://docs.renovatebot.com/modules/datasource/cdnjs/)** data source. UNPKG hosted libraries aren't updated.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Other Elements -->
+    <link href="https://unpkg.com/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"> <!--Update package to next available version -->
+</head>
+<body>
+    <!-- Other Elements -->
+    <script src="https://unpkg.com/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script> <!--Update package to next available version -->
+</body>
+</html>
+```
 
 ## Expected behavior
 
-Explain the expected behavior here.
+Update the bootstrap package to **5.3.8** (at the time of writing)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Other Elements -->
+    <link href="https://unpkg.com/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"> <!--Update package to next available version -->
+</head>
+<body>
+    <!-- Other Elements -->
+    <script src="https://unpkg.com/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script> <!--Update package to next available version -->
+</body>
+</html>
+```
 
 ## Link to the Renovate issue or Discussion
 
