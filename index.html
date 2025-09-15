@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Version Check</title>
+  <!-- Bootstrap 5.3.7 CSS from unpkg -->
+  <link href="https://unpkg.com/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light d-flex align-items-center justify-content-center vh-100">
+
+  <div class="text-center">
+    <h1 class="mb-3">Bootstrap Version</h1>
+    <p class="lead">
+      This page is using <span id="version" class="fw-bold text-primary"></span>
+    </p>
+  </div>
+
+  <!-- Bootstrap Bundle with Popper (JS) -->
+  <script src="https://unpkg.com/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script to display version -->
+  <script>
+    document.getElementById("version").textContent = bootstrap.Tooltip.VERSION;
+  </script>
+</body>
+</html>
